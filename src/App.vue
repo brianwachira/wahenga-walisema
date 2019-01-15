@@ -1,28 +1,58 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <head-img></head-img>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <add-quote></add-quote>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import headimg from './components/shared/Head.vue'
+import quotes from './components/local/Quotes.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    'head-img':headimg,
+    'add-quote': quotes
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#app{
+    background-image : url("http://i.imgur.com/yIeVjcQ.jpg");
+    height: 100%;
 }
 </style>
