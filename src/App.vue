@@ -6,6 +6,9 @@
         <div class="col-md-6">
           <add-quote></add-quote>
         </div>
+        <div class="col-md-6">
+          <quote-show></quote-show>
+        </div>
       </div>
     </div>
   </div>
@@ -14,12 +17,14 @@
 <script>
 import headimg from './components/shared/Head.vue'
 import quotes from './components/local/Quotes.vue'
+import quoteshow from './components/local/Quote-Show.vue'
 
 export default {
   name: 'app',
   components: {
     'head-img':headimg,
-    'add-quote': quotes
+    'add-quote': quotes,
+    'quote-show': quoteshow
   }
 }
 </script>
