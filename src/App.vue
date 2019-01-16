@@ -3,7 +3,7 @@
     <head-img></head-img>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6  text-center">
           <add-quote></add-quote>
         </div>
         <div class="col-md-6">
@@ -27,6 +27,7 @@ export default {
     'quote-show': quoteshow
   }
 }
+
 </script>
 
 <style>
