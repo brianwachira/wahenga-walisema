@@ -1,9 +1,29 @@
 <template>
-<div>
-    <h1 class="text-center text-light pt-5">Wahenga Walisema</h1>
-    <h2 class="text-center text-light mt-4"> Light fires in people's hearts</h2>
-</div>
+    <div>
+        <div>
+            <h1 class="text-center text-light pt-5">Wahenga Walisema</h1>
+        </div>
+        <div v-show="!addQuote">
+            <h2 class="text-center text-light mt-4"> Light fires in people's hearts</h2>
+        </div>
+    </div>
 </template>
+<script>
+import {serverBus} from '../../main'
+export default {
+  data (){
+    return {
+      addQuote : false
+    }
+  },
+  created(){
+             serverBus.$on('addQuote',(addQuotes)=>{
+             this.addQuote= addQuotes;
+         });
+  }
+}
+</script>
+
 <style scoped>
 h1{
     font-family: 'ZCOOL KuaiLe', cursive;
