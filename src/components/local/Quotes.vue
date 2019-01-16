@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-show="!addQuote">
-            <button class="btn btn-primary-outline indie mt-5 mx-auto d-block"  @click="addQuote = !addQuote">Add a quote</button><br/>
+            <button class="btn btn-primary-outline indie mt-5 mx-auto d-block"  @click="quoteAdding()">Add a quote</button><br/>
         </div>
         <div v-show="addQuote">
             <label class=" lbl text-white indie mt-3" for="author">Author</label>
@@ -26,6 +26,10 @@
             }
         },
         methods : {
+            quoteAdding(){
+            this.addQuote = true,
+            serverBus.$emit('addQuote',this.addQuote);
+            },
             displayQuote(){
                 if(this.quote.author !=="" && this.quote.content !==""){
                 this.quotePackage.unshift({
@@ -40,8 +44,9 @@
                     alert("No input field should be empty on submission");
                 }
             }
-        }
-    }
+        } 
+        
+}
 </script>
 
 <style scoped>
