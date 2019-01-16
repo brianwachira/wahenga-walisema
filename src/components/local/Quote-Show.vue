@@ -1,5 +1,5 @@
 <template>
-<ul class="text-light indie">
+<ul class="text-light indie pt-5">
     <label v-if="!quote">This section needs some light</label>
     <div v-else>
         <li v-for="(Quote,index) in quote" @click="removeQuote(index)">{{Quote.content}}<br/>{{Quote.author}}</li>
@@ -32,6 +32,7 @@
 <style scoped>
 .indie{ 
   font-family: 'Indie Flower', cursive;
+  font-weight: bold
 }
 li{
     cursor: pointer;
