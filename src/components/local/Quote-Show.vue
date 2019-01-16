@@ -12,22 +12,23 @@
      data(){
          return {
              quote: null
-         }
-     },
+            }
+        },
+
      created(){
-         serverBus.$on('quote',(quotes)=>{
+         serverBus.$on('quote',(quotes)=>{ 
              this.quote = quotes;
-         });
-     },methods :{
+            });
+        },methods :{
          removeQuote(index){
              if(confirm("Do you want to delete this Quote?")){
                 this.quote.splice(index,1);
-             }else  {
-                 return;
-             }
+            }else  {
+                return;
+            }
          }
      }
-    }
+}
 </script>
 <style scoped>
 .indie{ 
