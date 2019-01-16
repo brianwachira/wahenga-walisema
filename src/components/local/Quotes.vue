@@ -19,14 +19,20 @@
                 quote : {
                     author : null,
                     content : null
-                }
+                },
+                quotePackage : []
             }
         },
         methods : {
             displayQuote(){
                 //console.log(this.quote.author);
                 //console.log(this.quote.content);
-                serverBus.$emit('quote',this.quote);
+                this.quotePackage.unshift({
+                    author : this.quote.author,
+                    content : this.quote.content
+                });
+                serverBus.$emit('quote',this.quotePackage);
+                this.addQuote = false
             }
         }
     }
