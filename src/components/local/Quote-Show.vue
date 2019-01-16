@@ -2,7 +2,7 @@
 <ul class="text-light indie">
     <label v-if="!quote">This section needs some light</label>
     <div v-else>
-        <li>{{quote.content}}<br/>{{quote.author}}</li>
+        <li v-for="(Quote,index) in quote" @click="removeQuote(index)">{{Quote.content}}<br/>{{Quote.author}}</li>
     </div>
 </ul>
 </template>
@@ -18,12 +18,23 @@
          serverBus.$on('quote',(quotes)=>{
              this.quote = quotes;
          });
+     },methods :{
+         removeQuote(index){
+             if(confirm("Do you want to delete this Quote?")){
+                this.quote.splice(index,1);
+             }else  {
+                 return;
+             }
+         }
      }
     }
 </script>
 <style scoped>
 .indie{ 
   font-family: 'Indie Flower', cursive;
+}
+li{
+    cursor: pointer;
 }
 </style>
 
