@@ -1,5 +1,11 @@
 <template>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi pariatur molestiae, voluptate nulla doloremque est labore at. Unde nesciunt doloribus error corporis? Quaerat tenetur exercitationem quisquam, corrupti asperiores minima eum!Lorem</p>
+<ul class="text-light">
+    <label v-if="!quote">This section needs some light</label>
+    <div v-else>
+        <li>{{quote.author}}</li>
+        <li>{{quote.content}}</li>
+    </div>
+</ul>
 </template>
 <script>
     import { serverBus } from '../../main';
@@ -9,12 +15,10 @@
              quote: null
          }
      },
-     methods:{
-         created(){
-             serverBus.$on('quote',(quote)=>{
-                 this.quote = quote;
-             });
-         }
+     created(){
+         serverBus.$on('quote',(quotes)=>{
+             this.quote = quotes;
+         });
      }
     }
 </script>
