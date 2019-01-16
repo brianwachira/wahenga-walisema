@@ -1,9 +1,8 @@
 <template>
-<ul class="text-light">
+<ul class="text-light indie">
     <label v-if="!quote">This section needs some light</label>
     <div v-else>
-        <li>{{quote.author}}</li>
-        <li>{{quote.content}}</li>
+        <li>{{quote.content}}<br/>{{quote.author}}</li>
     </div>
 </ul>
 </template>
@@ -22,4 +21,9 @@
      }
     }
 </script>
+<style scoped>
+.indie{ 
+  font-family: 'Indie Flower', cursive;
+}
+</style>
 
