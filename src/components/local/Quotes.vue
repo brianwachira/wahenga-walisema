@@ -19,20 +19,26 @@
             return{
                 addQuote : false,
                 quote : {
-                    author : null,
-                    content : null
+                    author : "",
+                    content : ""
                 },
                 quotePackage : []
             }
         },
         methods : {
             displayQuote(){
+                if(this.quote.author !=="" && this.quote.content !==""){
                 this.quotePackage.unshift({
                     author : this.quote.author,
                     content : this.quote.content
                 });
                 serverBus.$emit('quote',this.quotePackage);
+                this.quote.author = "";
+                this.quote.content = "";
                 this.addQuote = false
+                }else{
+                    alert("No input field should be empty on submission");
+                }
             }
         }
     }
