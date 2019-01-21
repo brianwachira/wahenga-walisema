@@ -1,8 +1,15 @@
 <template>
     <div>
+        <transition 
+                    enter-active-class="animated bounceIn delay-2s"
+                    leave-active-class="animated bounceOut">
         <div v-show="!addQuote">
             <button class="btn btn-primary-outline indie mt-5 mx-auto d-block"  @click="quoteAdding()">Add a quote</button><br/>
         </div>
+        </transition>
+        <transition 
+                    enter-active-class="animated bounceIn delay-2s"
+                    leave-active-class="animated fadeOut">
         <div v-show="addQuote">
             <label class=" lbl text-white indie mt-3" for="author">Author</label>
             <input type="text" class="form-control indie w-75  mx-auto d-block" name="author" v-model="quote.author" placeholder="Enter the name of the author" required/>
@@ -10,6 +17,7 @@
             <textarea name="quote" class="form-control indie w-75 mx-auto d-block" cols="30" rows="4"  v-model="quote.content" placeholder="Enter a quote" required></textarea>
             <button class="btn btn-primary-outline indie mt-5 mx-auto d-block" @click="displayQuote()">submit it!</button><br/>
         </div>
+        </transition>
     </div>
 </template>
 <script>
