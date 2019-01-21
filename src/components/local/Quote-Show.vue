@@ -2,7 +2,14 @@
 <ul class="text-light indie pt-5">
     <label v-if="!quote">This section needs some light</label>
     <div v-else>
-        <li v-for="(Quote,index) in quote" @click="removeQuote(index)">{{Quote.content}}<br/>{{Quote.author}}</li>
+        <transition-group 
+        enter-active-class="animated fadeIn"
+        leave-active-class="animated fadeOut">
+            <li 
+                v-for="(Quote,index) in quote" 
+                @click="removeQuote(index)"
+                :key="Quote">{{Quote.content}}<br/>{{Quote.author}}</li>
+        </transition-group>
     </div>
 </ul>
 </template>
