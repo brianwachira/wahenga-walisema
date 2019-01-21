@@ -3,9 +3,11 @@
         <div>
             <h1 class="text-center text-light pt-5">Wahenga Walisema</h1>
         </div>
+        <transition leave-active-class="animated bounceOut">
         <div v-show="!addQuote">
             <h2 class="text-center text-light mt-4"> Light fires in people's hearts</h2>
         </div>
+        </transition>
     </div>
 </template>
 <script>
