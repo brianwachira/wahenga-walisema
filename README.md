@@ -51,6 +51,7 @@ https://brianwachira.github.io/wahenga-walisema/dist/
 
 ## Technologies Used
 Bootstrap<br/>
+Animate.css<br/>
 JQuery<br/>
 vue<br/>
 
