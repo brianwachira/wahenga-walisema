@@ -1,11 +1,11 @@
 <template>
     <div>
         <transition 
-                    enter-active-class="animated bounceIn delay-2s"
-                    leave-active-class="animated bounceOut">
-        <div v-show="!addQuote">
-            <button class="btn btn-primary-outline indie mt-5 mx-auto d-block"  @click="quoteAdding()">Add a quote</button><br/>
-        </div>
+            enter-active-class="animated bounceIn delay-2s"
+            leave-active-class="animated bounceOut">
+            <div v-show="!addQuote">
+                <button class="btn btn-primary-outline indie mt-5 mx-auto d-block"  @click="quoteAdding()">Add a quote</button><br/>
+            </div>
         </transition>
         <transition 
                     enter-active-class="animated bounceIn delay-2s"
