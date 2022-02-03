@@ -33,6 +33,7 @@ export default {
 <style>
 #app{
     background-image : url("http://i.imgur.com/yIeVjcQ.jpg");
+    background-repeat: no-repeat;
     height: 100%;
 }
 </style>
