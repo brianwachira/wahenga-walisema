@@ -35,5 +35,6 @@ export default {
     background-image : url("http://i.imgur.com/yIeVjcQ.jpg");
     background-repeat: no-repeat;
     height: 100%;
+    background-size: cover;
 }
 </style>
